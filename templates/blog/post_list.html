@@ -1,4 +1,15 @@
 <html>
+<head>
+    <title>investwise test blog</title>
+</head>
     <p>Hi there!</p>
-    <p>It works!</p>
+    <div>
+        {% for post in posts %}
+        <div>published: {{ post.publish_date }}</div>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaker }}</p>
+        {% endfor %}
+    </div>
+
+
 </html>
